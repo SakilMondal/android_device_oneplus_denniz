@@ -114,6 +114,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Input
 PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl \
     $(DEVICE_PATH)/keylayout/mt63xx-accdet_Headset.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/mt63xx-accdet_Headset.kl
 
 # Lights
