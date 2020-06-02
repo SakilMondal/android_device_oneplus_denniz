@@ -62,6 +62,10 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-denniz
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
