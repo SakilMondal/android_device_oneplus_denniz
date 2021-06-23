@@ -61,6 +61,10 @@ RELAX_USES_LIBRARY_CHECK := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_oneplus_denniz
+TARGET_RECOVERY_DEVICE_MODULES := init_oneplus_denniz
+
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
