@@ -34,6 +34,10 @@ $(call inherit-product-if-exists, vendor/oneplus/denniz/denniz-vendor.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Alert slider
+PRODUCT_PACKAGES += \
+    oplus-alert-slider
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080

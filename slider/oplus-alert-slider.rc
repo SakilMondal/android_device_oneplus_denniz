@@ -1,0 +1,2 @@
+service oplus-alert-slider /system/bin/oplus-alert-slider
+    class main
