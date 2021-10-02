@@ -112,6 +112,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keylayout/mt63xx-accdet_Headset.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/mt63xx-accdet_Headset.kl
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.denniz
