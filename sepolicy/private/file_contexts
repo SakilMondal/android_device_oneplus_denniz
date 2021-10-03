@@ -16,4 +16,4 @@
 /system/bin/vtservice           u:object_r:vtservice_exec:s0
 
 # Alert slider
-/system/bin/oplus-alert-slider    u:object_r:oplus-alert-slider_exec:s0
+/(system_ext|system/system_ext)/bin/alert-slider_daemon    u:object_r:alert-slider_daemon_exec:s0

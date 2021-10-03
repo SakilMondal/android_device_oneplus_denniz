@@ -1,0 +1,2 @@
+service alert-slider_daemon /system_ext/bin/alert-slider_daemon
+    class main

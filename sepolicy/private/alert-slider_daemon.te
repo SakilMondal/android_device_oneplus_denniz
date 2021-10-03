@@ -1,0 +1,8 @@
+type alert-slider_daemon, domain, coredomain;
+type alert-slider_daemon_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain(alert-slider_daemon)
+
+allow alert-slider_daemon uhid_device:chr_file rw_file_perms;
+allow alert-slider_daemon self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow alert-slider_daemon proc_tristatekey:dir r_dir_perms;

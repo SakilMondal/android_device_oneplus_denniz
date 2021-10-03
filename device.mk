@@ -36,7 +36,7 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Alert slider
 PRODUCT_PACKAGES += \
-    oplus-alert-slider
+    alert-slider_daemon
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400

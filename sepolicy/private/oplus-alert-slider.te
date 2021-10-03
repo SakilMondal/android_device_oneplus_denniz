@@ -1,8 +1,0 @@
-type oplus-alert-slider, domain, coredomain;
-type oplus-alert-slider_exec, system_file_type, exec_type, file_type;
-
-init_daemon_domain(oplus-alert-slider)
-
-allow oplus-alert-slider uhid_device:chr_file rw_file_perms;
-allow oplus-alert-slider self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
-allow oplus-alert-slider proc_tristatekey:dir r_dir_perms;
