@@ -1,0 +1,21 @@
+type hal_fingerprint_denniz, domain;
+hal_client_domain(hal_fingerprint_denniz, hal_fingerprint)
+hal_server_domain(hal_fingerprint_denniz, hal_fingerprint)
+
+type hal_fingerprint_denniz_exec, system_file_type, exec_type, file_type;
+init_daemon_domain(hal_fingerprint_denniz)
+
+# Allow hal_fingerprint_denniz to hal_fingerprint_hwservice
+allow hal_fingerprint_denniz hal_fingerprint_hwservice:hwservice_manager find;
+
+# Allow hal_fingerprint_denniz to read and write to sysfs_fod
+allow hal_fingerprint_denniz sysfs_fod:file rw_file_perms;
+
+# Allow to use wakelock
+wakelock_use(hal_fingerprint_denniz)
+
+# Allow sysfs to open and write a file
+allow hal_fingerprint_denniz sysfs:file { open write };
+
+# Allow sysfs fingerprint notify file to open and write
+allow hal_fingerprint_denniz sysfs_fingerprint_notify:file { open write };
