@@ -8,6 +8,9 @@ on post-fs-data
 
 on post-fs
 
+on property:init.svc.face_hal=restarting
+    stop face_hal
+
 service prop-adap-core-gsi /odm/bin/self-init gsicore
     class core
     user root
