@@ -10,3 +10,6 @@ type proc_tristatekey, fs_type, proc_type;
 type proc_tp, fs_type, proc_type;
 type mtk_hal_mmagent, sysfs_type, fs_type;
 type sysfs_mm, sysfs_type, fs_type;
+
+# VBUS
+type sysfs_vbus, fs_type, sysfs_type;

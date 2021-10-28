@@ -1,0 +1,32 @@
+type kpoc_charger_exec, system_file_type, exec_type, file_type;
+typeattribute kpoc_charger coredomain;
+
+hal_client_domain(kpoc_charger, hal_light)
+hal_client_domain(kpoc_charger, hal_health)
+
+init_daemon_domain(kpoc_charger)
+
+allow kpoc_charger block_device:dir search;
+allow kpoc_charger graphics_device:dir search;
+allow kpoc_charger graphics_device:chr_file rw_file_perms;
+allow kpoc_charger init:unix_stream_socket connectto;
+allow kpoc_charger input_device:dir { r_dir_perms search };
+allow kpoc_charger input_device:chr_file rw_file_perms;
+
+allow kpoc_charger proc_cmdline:file r_file_perms;
+allow kpoc_charger property_socket:sock_file write;
+
+allow kpoc_charger self:capability { net_admin sys_boot sys_nice };
+allow kpoc_charger self:netlink_kobject_uevent_socket { create bind read setopt };
+allow kpoc_charger metadata_file:dir search;
+allow kpoc_charger mtd_device:chr_file r_file_perms;
+allow kpoc_charger mtd_device:dir search;
+allow kpoc_charger rootfs:file r_file_perms;
+allow kpoc_charger rtc_device:chr_file rw_file_perms;
+allow kpoc_charger sysfs_leds:dir { r_dir_perms search };
+allow kpoc_charger sysfs_batteryinfo:dir { r_dir_perms search };
+allow kpoc_charger sysfs_power:file rw_file_perms;
+allow kpoc_charger sysfs_dt_firmware_android:dir { r_dir_perms search };
+allow kpoc_charger sysfs_vbus:file r_file_perms;
+
+r_dir_file(kpoc_charger, sysfs_dt_firmware_android)

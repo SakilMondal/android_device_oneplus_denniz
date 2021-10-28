@@ -5,8 +5,20 @@
 
 /sys/kernel/oplus_display/dimlayer_bl_en           u:object_r:sysfs_fod:s0
 
+# KPOC
+/system/bin/kpoc_charger        u:object_r:kpoc_charger_exec:s0
+
 # Light Hal
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.lights-service\.mediatek u:object_r:hal_light_default_exec:s0
+
+# MTD
+/dev/block/mtd(.*)?             u:object_r:mtd_device:s0
+/dev/block/mntlblk(.*)?         u:object_r:mtd_device:s0
+/dev/ubi_ctrl                   u:object_r:mtd_device:s0
+/dev/ubi[_0-9]*                 u:object_r:mtd_device:s0
+
+# RTC
+/dev/rtc[0-9]+                  u:object_r:rtc_device:s0
 
 # Vendor overlay
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?      u:object_r:vendor_configs_file:s0
