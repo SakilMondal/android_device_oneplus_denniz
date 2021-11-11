@@ -47,7 +47,7 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/fstab.mt6893:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6893
+    $(DEVICE_PATH)/vendor_overlay/etc/fstab.mt6893:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6893
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -69,8 +69,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6893.rc \
-    fstab.mt6893
+    init.mt6893.rc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -109,7 +108,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Vendor overlay
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION))
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
