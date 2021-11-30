@@ -1,5 +1,6 @@
 type hal_fingerprint_denniz, domain;
 typeattribute hal_fingerprint_denniz data_between_core_and_vendor_violators;
+typeattribute hal_fingerprint_denniz vendor_executes_system_violators;
 hal_client_domain(hal_fingerprint_denniz, hal_fingerprint)
 hal_server_domain(hal_fingerprint_denniz, hal_fingerprint)
 
