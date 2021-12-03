@@ -15,7 +15,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1
+    persist.dbg.vt_avail_ovr=0 \
+    persist.vendor.vilte_support=0 \
+    persist.vendor.mtk.vilte.enable=0 
 
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
