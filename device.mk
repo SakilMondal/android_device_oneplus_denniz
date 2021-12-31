@@ -167,6 +167,10 @@ PRODUCT_SOONG_NAMESPACES += \
 -include $(DEVICE_PATH)/system_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# Symbols
+PRODUCT_PACKAGES += \
+    libshim_vtservice
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.denniz
