@@ -18,8 +18,8 @@ public class PhoneStateService extends Service {
 
     private void handleServiceStateChanged(ServiceState serviceState) {
         Log.i(LOG_TAG, "handleServiceStateChanged");
-        if ((sLastState == null || sLastState.getDataRegState() != ServiceState.STATE_IN_SERVICE)
-                && serviceState.getDataRegState() == ServiceState.STATE_IN_SERVICE) {
+        if (((sLastState == null) ? true : (sLastState.getDataRegState() != ServiceState.STATE_IN_SERVICE))
+                && ((serviceState == null) ? false : (serviceState.getDataRegState() == ServiceState.STATE_IN_SERVICE))) {
             SharedPreferences prefs = getSharedPreferences("prefs", Context.MODE_PRIVATE);
 
             if (prefs.getBoolean("first_time", true)) {
