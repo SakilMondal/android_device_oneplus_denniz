@@ -19,8 +19,8 @@ DEVICE_PATH := device/oneplus/denniz
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# APEX
+TARGET_FLATTEN_APEX := true
 
 # VNDK
 PRODUCT_EXTRA_VNDK_VERSIONS := 30

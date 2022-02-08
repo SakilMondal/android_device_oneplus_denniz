@@ -1,3 +1,7 @@
+# Apex
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.apex.updatable=false
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.bluetooth_audio_hal.disabled=true
