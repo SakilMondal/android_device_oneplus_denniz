@@ -1,3 +1,5 @@
+import /system/etc/init/hw/init.oneplusparts.rc
+
 on init
     mount none /vendor/lost+found /vendor/overlay bind
     setprop sys.usb.ffs.aio_compat 1

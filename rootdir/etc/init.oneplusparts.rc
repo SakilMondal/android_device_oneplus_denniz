@@ -1,0 +1,9 @@
+# Vibration Strength
+on property:persist.vib_strength=0
+    write /sys/class/leds/vibrator/gain 0x16
+
+on property:persist.vib_strength=1
+    write /sys/class/leds/vibrator/gain 0x40
+
+on property:persist.vib_strength=2
+    write /sys/class/leds/vibrator/gain 0x80

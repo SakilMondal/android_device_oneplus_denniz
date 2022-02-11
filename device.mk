@@ -74,7 +74,9 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6893.rc
+    init.mt6893.rc \
+    init.oneplusparts.rc \
+    init.oneplusparts.sh
 
 # Keylayout
 PRODUCT_COPY_FILES += \
