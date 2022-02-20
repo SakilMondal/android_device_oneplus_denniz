@@ -7,6 +7,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera \
     vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 
+# Dexopt
+PRODUCT_SYSTEM_PROPERTIES += \
+    pm.dexopt.first-boot=quicken \
+    pm.dexopt.bg-dexopt=everything
+
 # GBoard
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.ime.kb_pad_port_b=1 \
