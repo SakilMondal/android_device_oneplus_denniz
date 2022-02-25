@@ -2,3 +2,8 @@
 allow system_server sysfs_battery_supply:file { getattr open write };
 allow system_server app_zygote:process { getpgid };
 allow system_server default_android_hwservice:hwservice_manager { find };
+
+allow system_server vtservice:dir { search };
+allow system_server vtservice:file { read };
+allow system_server vtservice:file { open };
+binder_call(alert-slider_daemon, system_server)

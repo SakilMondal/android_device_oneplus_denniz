@@ -6,3 +6,10 @@ init_daemon_domain(alert-slider_daemon)
 allow alert-slider_daemon uhid_device:chr_file rw_file_perms;
 allow alert-slider_daemon self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 allow alert-slider_daemon proc_tristatekey:dir r_dir_perms;
+allow alert-slider_daemon proc_tristatekey:file { open  read };
+allow alert-slider_daemon shell_exec:file { execute  execute_no_trans  read  open  map  getattr };
+allow alert-slider_daemon input_device:dir { search };
+allow alert-slider_daemon input_device:chr_file { open read write ioctl };
+allow alert-slider_daemon system_file:file { execute_no_trans };
+allow alert-slider_daemon sysfs_mm:dir { search };
+allow alert-slider_daemon audio_service:service_manager { find };
