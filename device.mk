@@ -127,6 +127,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ImsServiceBase
 
+# Udfps
+PRODUCT_PACKAGES += \
+    UdfpsResources
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
