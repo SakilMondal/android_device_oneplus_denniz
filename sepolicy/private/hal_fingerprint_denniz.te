@@ -15,7 +15,7 @@ allow hal_fingerprint_denniz sysfs_fod:file rw_file_perms;
 wakelock_use(hal_fingerprint_denniz)
 
 # Allow sysfs to open and write a file
-allow hal_fingerprint_denniz sysfs:file { open write };
+allow hal_fingerprint_denniz sysfs:file { open write read getattr };
 
 # Allow sysfs fingerprint notify file to open and write
-allow hal_fingerprint_denniz sysfs_fingerprint_notify:file { open write };
+allow hal_fingerprint_denniz sysfs_fingerprint_notify:file { open write read getattr };
