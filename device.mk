@@ -31,6 +31,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 $(call inherit-product-if-exists, vendor/oneplus/denniz/denniz-vendor.mk)
 $(call inherit-product-if-exists, vendor/mediatek/ims/mtk-ims.mk)
 
+# OneplusParts
+$(call inherit-product, packages/apps/OneplusParts/parts.mk)
+
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
