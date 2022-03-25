@@ -32,14 +32,18 @@ def IncrementalOTA_InstallEnd(info):
   return
 
 def AddImage(info, basename, dest):
-  name = basename
-  data = info.input_zip.read("IMAGES/" + basename)
-  common.ZipWriteStr(info.output_zip, name, data)
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
+  path = "IMAGES/" + basename
+  if path not in info.input_zip.namelist():
+    return
+
+  data = info.input_zip.read(path)
+  common.ZipWriteStr(info.output_zip, basename, data)
+  info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def OTA_InstallEnd(info):
   info.script.Print("Patching firmware images...")
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
+  info.script.Print("Patching vbmeta images...")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
   AddImage(info, "vbmeta_system.img", "/dev/block/by-name/vbmeta_system")
   return
