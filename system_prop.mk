@@ -28,6 +28,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.vilte_support=0 \
     persist.vendor.mtk.vilte.enable=0 
 
+# Iorap
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
 # OMX
 PRODUCT_SYSTEM_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
