@@ -21,3 +21,5 @@ allow hal_fingerprint_denniz sysfs:file { open write read getattr };
 
 # Allow sysfs fingerprint notify file to open and write
 allow hal_fingerprint_denniz sysfs_fingerprint_notify:file { open write read getattr };
+
+allow hal_fingerprint_denniz sysfs_dm:file rw_file_perms;
