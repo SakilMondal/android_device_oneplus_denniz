@@ -22,11 +22,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.corner_key_r=35
 
 # IMS
-PRODUCT_SYSTEM_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=0 \
+    persist.dbg.vt_avail_ovr=1 \
     persist.vendor.vilte_support=0 \
-    persist.vendor.mtk.vilte.enable=0 
+    persist.vendor.mtk.vilte.enable=0 \
+    persist.dbg.wfc_avail_ovr=1
 
 # Iorap
 PRODUCT_PROPERTY_OVERRIDES += \
