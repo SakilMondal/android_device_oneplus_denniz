@@ -17,3 +17,6 @@
 
 # Alert slider
 /(system_ext|system/system_ext)/bin/alert-slider_daemon    u:object_r:alert-slider_daemon_exec:s0
+
+# V4A Drivers
+/odm/etc/audio_effects.xml      u:object_r:vendor_configs_file:s0

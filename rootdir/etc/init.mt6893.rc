@@ -2,6 +2,7 @@ import /system/etc/init/hw/init.oneplusparts.rc
 
 on init
     mount none /vendor/lost+found /vendor/overlay bind
+    mount none /vendor/etc/audio_effects.xml /odm/etc/audio_effects.xml bind
     setprop sys.usb.ffs.aio_compat 1
     setprop persist.vendor.vilte_support 0
 
