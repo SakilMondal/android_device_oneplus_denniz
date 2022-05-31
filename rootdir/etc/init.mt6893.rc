@@ -21,6 +21,9 @@ on property:init.svc.face_hal=restarting
 on boot
     # ZRAM
     swapon_all /vendor/fstab.enableswap
+    
+    # start EAS+
+    write /sys/devices/system/cpu/eas/enable 1
 
     # Touchpanel
     write /proc/touchpanel/oplus_tp_limit_enable 0
