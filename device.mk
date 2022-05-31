@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     UdfpsResources
 
+# ViperFX
+PRODUCT_PACKAGES += \
+    ViperFX
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
