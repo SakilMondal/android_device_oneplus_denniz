@@ -29,7 +29,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.corner_key_r=35
 
 # IMS
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES  += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.vendor.vilte_support=0 \
@@ -37,7 +37,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.wfc_avail_ovr=1
 
 # Iorap
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES  += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 # Media Transcoding
@@ -45,7 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.fuse.transcode_default=false
 
 # NFC
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES  += \
     persist.sys.nfc.disPowerSave=1 \
     persist.nfc.smartcard.recorder.enable=true \
     persist.sys.nfc.default=on
