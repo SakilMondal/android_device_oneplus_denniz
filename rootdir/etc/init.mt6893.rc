@@ -18,10 +18,12 @@ on post-fs
 on property:init.svc.face_hal=restarting
     stop face_hal
 
-on boot
+on property:sys.boot_completed=1
     # ZRAM
-    swapon_all /vendor/fstab.enableswap
-    
+    rm /data/unencrypted/zram_swap
+    swapon_all /vendor/etc/fstab.mt6893
+    write /proc/sys/vm/swappiness 100
+
     # start EAS+
     write /sys/devices/system/cpu/eas/enable 1
 
