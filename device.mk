@@ -97,10 +97,6 @@ PRODUCT_PACKAGES += \
     init.oneplusparts.rc \
     init.oneplusparts.sh
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
-
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
