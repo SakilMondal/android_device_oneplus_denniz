@@ -3,7 +3,6 @@ import /system/etc/init/hw/init.oneplusparts.rc
 on init
     mount none /vendor/lost+found /vendor/overlay bind
     setprop sys.usb.ffs.aio_compat 1
-    setprop persist.vendor.mtk.vilte.enable 0
     setprop persist.vendor.vilte_support 0
 
     # ZRAM setup
@@ -18,6 +17,14 @@ on post-fs
 
 on property:init.svc.face_hal=restarting
     stop face_hal
+
+on boot
+    # ZRAM
+    swapon_all /vendor/fstab.enableswap
+
+    # Touchpanel
+    write /proc/touchpanel/oplus_tp_limit_enable 0
+    write /proc/touchpanel/oplus_tp_direction 1
 
 service prop-adap-core-gsi /odm/bin/self-init gsicore
     class core
