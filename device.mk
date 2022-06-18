@@ -19,6 +19,9 @@ DEVICE_PATH := device/oneplus/denniz
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # APEX
 TARGET_FLATTEN_APEX := true
 
