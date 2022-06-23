@@ -1,3 +1,5 @@
 persist.cabc_profile        u:object_r:cabc_prop:s0
 persist.vib_strength        u:object_r:vib_strength:s0
 ro.telephony.default_network u:object_r:radio_prop:s0
+# DT2W
+persist.sys.dt2w         u:object_r:dt2w_prop:s0

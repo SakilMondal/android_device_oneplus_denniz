@@ -1,5 +1,6 @@
 allow system_app proc_tp:dir search;
 allow system_app proc_tp:file rw_file_perms;
+set_prop(system_app, dt2w_prop)
 
 # Allow system_app to set cabc props
 set_prop(system_app, cabc_prop)
