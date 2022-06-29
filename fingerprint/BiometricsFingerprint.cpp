@@ -223,16 +223,6 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
     return Void();
 }
 
-Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
-set(DIMLAYER_PATH, 0);
-return Void();
-}
-
-Return<void> BiometricsFingerprint::onShowUdfpsOverlay() { 
-set(DIMLAYER_PATH, 1);
-return Void();
-}
-
 } // namespace implementation
 }  // namespace V2_3
 }  // namespace fingerprint
