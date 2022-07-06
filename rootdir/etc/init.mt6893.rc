@@ -24,6 +24,9 @@ on property:sys.boot_completed=1
     rm /data/unencrypted/zram_swap
     swapon_all /vendor/etc/fstab.mt6893
     write /proc/sys/vm/swappiness 100
+    # switch to schedutil
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedutil"
 
     # start EAS+
     write /sys/devices/system/cpu/eas/enable 1
