@@ -145,6 +145,10 @@ PRODUCT_PACKAGES += \
     mtk-ims \
     mtk-ims-telephony
 
+# MTK InCallService
+PRODUCT_PACKAGES += \
+    MtkInCallService
+
 # Permissions
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml

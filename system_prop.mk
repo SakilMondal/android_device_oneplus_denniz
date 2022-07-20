@@ -2,6 +2,10 @@
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.apex.updatable=false
 
+# Audio
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.vc_call_vol_steps=7
+
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_offload.disabled=true \
