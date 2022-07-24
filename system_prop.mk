@@ -8,6 +8,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_offload.disabled=true \
     ro.bluetooth.a2dp_offload.supported=false
 
+# SOC
+PRODUCT_PRODUCT_PROPERTIES  += \
+    ro.soc.manufacturer=Mediatek \
+    ro.soc.model=MT6893
+
 # Camera
 PRODUCT_SYSTEM_PROPERTIES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera \
@@ -68,7 +73,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.surface_flinger.running_without_sync_framework=true \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
-    debug.sf.frame_rate_multiple_threshold=120 \
+    debug.sf.frame_rate_multiple_threshold=90 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
     ro.surface_flinger.set_idle_timer_ms=500 \
     ro.surface_flinger.set_touch_timer_ms=750 \
@@ -90,3 +95,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.crypto.volume.filenames_mode=aes-256-cts \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.volume.options=::v2
+
+#AOD
+PRODUCT_SYSTEM_PROPERTIES  += \
+    debug.force_no_blanking=true
+
+# Display HDR
+PRODUCT_PRODUCT_PROPERTIES  += \
+    ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.has_wide_color_display=true \
+    ro.surface_flinger.has_HDR_display=true
