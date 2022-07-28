@@ -1,6 +1,24 @@
 # APNs
 etc/apns-conf.xml:product/etc/apns-conf.xml
 
+# APU Wares
+system_ext/lib/libapuwareapusys.mtk.so
+system_ext/lib/libapuwarehmp.mtk.so
+system_ext/lib/libapuwareutils.mtk.so
+system_ext/lib/libapuwarexrp.mtk.so
+system_ext/lib/vendor.mediatek.hardware.apuware.apusys@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.hmp@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.utils@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.xrp@1.0.so
+system_ext/lib64/libapuwareapusys.mtk.so
+system_ext/lib64/libapuwarehmp.mtk.so
+system_ext/lib64/libapuwareutils.mtk.so
+system_ext/lib64/libapuwarexrp.mtk.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
+
 # Bluetooth (AptX)
 lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
