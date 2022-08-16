@@ -48,10 +48,6 @@ PRODUCT_PACKAGES += \
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio.a2dp.default
 	
 # CameraGo	
 PRODUCT_PACKAGES += \
