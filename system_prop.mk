@@ -11,6 +11,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_offload.disabled=true \
     ro.bluetooth.a2dp_offload.supported=false
 
+# Enable system-side generic bluetooth audio HAL
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.system_audio_hal.enabled=1
+
 # SOC
 PRODUCT_PRODUCT_PROPERTIES  += \
     ro.soc.manufacturer=Mediatek \
