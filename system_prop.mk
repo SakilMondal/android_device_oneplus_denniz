@@ -35,6 +35,10 @@ PRODUCT_SYSTEM_PROPERTIES  += \
     persist.vendor.mtk.vilte.enable=0 \
     persist.dbg.wfc_avail_ovr=1
 
+# Gralloc4
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.log.tag.gralloc4=S
+
 # Iorap
 PRODUCT_PRODUCT_PROPERTIES  += \
     persist.device_config.runtime_native_boot.iorap_readahead_enable=true
