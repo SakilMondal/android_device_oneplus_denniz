@@ -84,6 +84,8 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_KERNEL_CONFIG := denniz_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS := KBUILD_BUILD_USER="SakilMondal" KBUILD_BUILD_HOST=Compiler
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/proton
 TARGET_KERNEL_SOURCE := kernel/oneplus/denniz
 
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
