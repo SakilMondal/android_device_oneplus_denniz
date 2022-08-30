@@ -130,6 +130,9 @@ BOARD_SUPER_PARTITION_GROUPS := main
 # Power
 TARGET_TAP_TO_WAKE_NODE := /proc/touchpanel/double_tap_enable
 
+# Properties
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
+
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
