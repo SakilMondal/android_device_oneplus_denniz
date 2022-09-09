@@ -175,13 +175,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
 
-# Symbols
-PRODUCT_PACKAGES += \
-    libshim_vtservice
-
-PRODUCT_PACKAGES += \
-    ImsServiceBase
-
 # Udfps
 PRODUCT_PACKAGES += \
     UdfpsResources
